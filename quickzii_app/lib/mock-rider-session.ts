@@ -47,12 +47,12 @@ export const AI_PLACEHOLDER_RESPONSE = "[AI response will be generated here]"
 
 export const mockRiderSession: RiderSession = {
   rider: {
-    id: "rider_001",
-    firstName: "Sonia",
-    initial: "S",
+    id: "76c532ce-31af-4a32-8950-92809a189ccd",
+    firstName: "Mirja",
+    initial: "M",
   },
   activeBooking: {
-    id: "371de6a3-985c-4cdb-ac2e-1754d8494ed7",
+    id: "4b46e142-8835-4c81-9c24-d0e0ff4eaa83",
     restaurant: "Sakura Ramen House",
     dropoffAddress: "48 Maple Street, Apt 12B, Brooklyn",
     status: "Picked up",
