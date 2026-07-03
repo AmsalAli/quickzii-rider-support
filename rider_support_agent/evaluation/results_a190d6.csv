@@ -1,0 +1,16 @@
+scenario_id,conversation_id,text,quick_reply,expected_intent,expected_risk,expected_tools,actual_intent,actual_risk,actual_tools,escalated,processing_ms,intent_correct,risk_correct,tool_correct
+T01,eval-a190d6-T01,I pressed can't reach customer. They're not picking up.,customer_unreachable,customer_unreachable,low,['share_customer_contact'],customer_unreachable,low,"['lookup_booking', 'share_customer_contact', 'send_reply_and_close']",False,8407.4,True,True,True
+T02,eval-a190d6-T02,"Actually never mind, I got through.",customer_unreachable,customer_unreachable,low,['send_reply_and_close'],customer_unreachable,low,['send_reply_and_close'],False,3129.9,True,True,True
+T03,eval-a190d6-T03,The restaurant said 10 more minutes.,order_not_ready,order_not_ready,low,['start_wait_timer'],order_not_ready,low,"['lookup_booking', 'start_wait_timer']",False,5319.5,True,True,True
+T04,eval-a190d6-T04,The restaurant has no record of this order.,order_not_in_restaurant,order_not_in_restaurant,low,['start_wait_timer'],order_not_in_restaurant,low,[],False,1639.3,True,True,False
+T05,eval-a190d6-T05,I forgot to press deliver. The code was 1234.,forgot_to_finish,forgot_to_finish,low,['mark_delivery_complete'],forgot_to_finish,low,['lookup_booking'],False,3487.0,True,True,False
+T06,eval-a190d6-T06,"Bike chain snapped, roughly 1km from drop-off.",vehicle_breakdown,vehicle_breakdown,medium,['propose_human_action'],vehicle_breakdown,medium,"['lookup_booking', 'propose_human_action']",True,8474.4,True,True,True
+T07,eval-a190d6-T07,The address doesn't exist. Been going in circles.,cannot_deliver,cannot_deliver,medium,['propose_human_action'],cannot_deliver,medium,"['lookup_booking', 'propose_human_action']",True,9757.6,True,True,True
+T08,eval-a190d6-T08,The box was already crushed when I picked it up.,order_damaged,order_damaged,high,['escalate_to_human'],order_damaged,high,[],False,2147.9,True,True,False
+T09,eval-a190d6-T09,Customer says the order is wrong and won't take it.,customer_refused,customer_refused,high,['escalate_to_human'],customer_refused,high,[],False,2352.5,True,True,False
+T10,eval-a190d6-T10,The app is showing me the wrong pickup location.,other,other,medium,"['escalate_to_human', 'propose_human_action']",cannot_deliver,medium,[],False,4815.1,False,True,False
+T11,eval-a190d6-T11,"Hi, can you send me the customer's phone number please?",,customer_unreachable,low,['share_customer_contact'],customer_unreachable,low,"['lookup_booking', 'share_customer_contact', 'send_reply_and_close']",False,8598.0,True,True,True
+T12,eval-a190d6-T12,"The order is damaged, sauce everywhere.",,order_damaged,high,['escalate_to_human'],order_damaged,high,[],False,5933.6,True,True,False
+T13,eval-a190d6-T13,"My scooter tyre is flat, still 3km away.",,vehicle_breakdown,medium,['propose_human_action'],vehicle_breakdown,medium,"['lookup_booking', 'propose_human_action']",True,11370.0,True,True,True
+T14,eval-a190d6-T14,"Actually I was just checking pickup address, sorry.",customer_unreachable,customer_unreachable,low,"['lookup_booking', 'send_reply_and_close']",customer_unreachable,low,"['lookup_booking', 'send_reply_and_close']",False,4414.7,True,True,True
+T15,eval-a190d6-T15,"Never mind, sorted it myself.",other,other,medium,['send_reply_and_close'],forgot_to_finish,low,['send_reply_and_close'],False,4862.1,False,False,True

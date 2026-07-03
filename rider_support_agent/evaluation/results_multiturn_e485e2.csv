@@ -1,0 +1,16 @@
+scenario_id,expected_intent,expected_risk,expected_tools,actual_intent_final,actual_risk_final,tools_turn1,tools_turn2,tools_all,followup_used,escalated,total_ms,first_turn_tool_hit,full_flow_tool_hit,intent_correct,risk_correct
+T01,customer_unreachable,low,['share_customer_contact'],customer_unreachable,low,"['lookup_booking', 'share_customer_contact', 'send_reply_and_close']",[],"['lookup_booking', 'share_customer_contact', 'send_reply_and_close']",False,False,7044.0,True,True,True,True
+T02,customer_unreachable,low,['send_reply_and_close'],customer_unreachable,low,['send_reply_and_close'],[],['send_reply_and_close'],False,False,2163.5,True,True,True,True
+T03,order_not_ready,low,['start_wait_timer'],order_not_ready,low,['lookup_booking'],[],['lookup_booking'],False,False,6252.8,False,False,True,True
+T04,order_not_in_restaurant,low,['start_wait_timer'],order_not_in_restaurant,low,[],['start_wait_timer'],['start_wait_timer'],True,False,8286.9,False,True,True,True
+T05,forgot_to_finish,low,['mark_delivery_complete'],other,medium,['mark_delivery_complete'],['mark_delivery_complete'],"['mark_delivery_complete', 'mark_delivery_complete']",True,False,10771.7,True,True,False,False
+T06,vehicle_breakdown,medium,['propose_human_action'],vehicle_breakdown,medium,"['lookup_booking', 'propose_human_action']",[],"['lookup_booking', 'propose_human_action']",False,True,9293.9,True,True,True,True
+T07,cannot_deliver,medium,['propose_human_action'],cannot_deliver,medium,"['lookup_booking', 'propose_human_action']",[],"['lookup_booking', 'propose_human_action']",False,True,10466.1,True,True,True,True
+T08,order_damaged,high,['escalate_to_human'],order_damaged,high,[],['escalate_to_human'],['escalate_to_human'],True,True,13008.3,False,True,True,True
+T09,customer_refused,high,['escalate_to_human'],customer_refused,high,[],['escalate_to_human'],['escalate_to_human'],True,True,9174.5,False,True,True,True
+T10,other,medium,"['escalate_to_human', 'propose_human_action']",other,medium,['lookup_booking'],[],['lookup_booking'],False,False,7823.2,False,False,True,True
+T11,customer_unreachable,low,['share_customer_contact'],customer_unreachable,low,"['lookup_booking', 'share_customer_contact', 'send_reply_and_close']",[],"['lookup_booking', 'share_customer_contact', 'send_reply_and_close']",False,False,9558.7,True,True,True,True
+T12,order_damaged,high,['escalate_to_human'],order_damaged,high,[],['escalate_to_human'],['escalate_to_human'],True,True,11427.5,False,True,True,True
+T13,vehicle_breakdown,medium,['propose_human_action'],vehicle_breakdown,medium,"['lookup_booking', 'propose_human_action']",[],"['lookup_booking', 'propose_human_action']",False,True,11366.8,True,True,True,True
+T14,customer_unreachable,low,"['lookup_booking', 'send_reply_and_close']",customer_unreachable,low,"['lookup_booking', 'send_reply_and_close']",[],"['lookup_booking', 'send_reply_and_close']",False,False,4589.7,True,True,True,True
+T15,other,medium,['send_reply_and_close'],forgot_to_finish,low,['send_reply_and_close'],[],['send_reply_and_close'],False,False,4835.6,True,True,False,False

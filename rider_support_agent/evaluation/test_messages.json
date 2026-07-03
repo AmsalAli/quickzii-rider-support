@@ -1,0 +1,17 @@
+[
+  {"id": "T01", "quick_reply_intent": "customer_unreachable", "text": "I pressed can't reach customer. They're not picking up.", "expected_intent": "customer_unreachable", "expected_risk": "low", "expected_tools_any_of": ["share_customer_contact"]},
+  {"id": "T02", "quick_reply_intent": "customer_unreachable", "text": "Actually never mind, I got through.", "expected_intent": "customer_unreachable", "expected_risk": "low", "expected_tools_any_of": ["send_reply_and_close"]},
+  {"id": "T03", "quick_reply_intent": "order_not_ready", "text": "The restaurant said 10 more minutes.", "expected_intent": "order_not_ready", "expected_risk": "low", "expected_tools_any_of": ["start_wait_timer"]},
+  {"id": "T04", "quick_reply_intent": "order_not_in_restaurant", "text": "The restaurant has no record of this order.", "expected_intent": "order_not_in_restaurant", "expected_risk": "low", "expected_tools_any_of": ["start_wait_timer"]},
+  {"id": "T05", "quick_reply_intent": "forgot_to_finish", "text": "I forgot to press deliver. The code was 1234.", "expected_intent": "forgot_to_finish", "expected_risk": "low", "expected_tools_any_of": ["mark_delivery_complete"]},
+  {"id": "T06", "quick_reply_intent": "vehicle_breakdown", "text": "Bike chain snapped, roughly 1km from drop-off.", "expected_intent": "vehicle_breakdown", "expected_risk": "medium", "expected_tools_any_of": ["propose_human_action"]},
+  {"id": "T07", "quick_reply_intent": "cannot_deliver", "text": "The address doesn't exist. Been going in circles.", "expected_intent": "cannot_deliver", "expected_risk": "medium", "expected_tools_any_of": ["propose_human_action"]},
+  {"id": "T08", "quick_reply_intent": "order_damaged", "text": "The box was already crushed when I picked it up.", "expected_intent": "order_damaged", "expected_risk": "high", "expected_tools_any_of": ["escalate_to_human"]},
+  {"id": "T09", "quick_reply_intent": "customer_refused", "text": "Customer says the order is wrong and won't take it.", "expected_intent": "customer_refused", "expected_risk": "high", "expected_tools_any_of": ["escalate_to_human"]},
+  {"id": "T10", "quick_reply_intent": "other", "text": "The app is showing me the wrong pickup location.", "expected_intent": "other", "expected_risk": "medium", "expected_tools_any_of": ["propose_human_action", "escalate_to_human"]},
+  {"id": "T11", "quick_reply_intent": null, "text": "Hi, can you send me the customer's phone number please?", "expected_intent": "customer_unreachable", "expected_risk": "low", "expected_tools_any_of": ["share_customer_contact"]},
+  {"id": "T12", "quick_reply_intent": null, "text": "The order is damaged, sauce everywhere.", "expected_intent": "order_damaged", "expected_risk": "high", "expected_tools_any_of": ["escalate_to_human"]},
+  {"id": "T13", "quick_reply_intent": null, "text": "My scooter tyre is flat, still 3km away.", "expected_intent": "vehicle_breakdown", "expected_risk": "medium", "expected_tools_any_of": ["propose_human_action"]},
+  {"id": "T14", "quick_reply_intent": "customer_unreachable", "text": "Actually I was just checking pickup address, sorry.", "expected_intent": "customer_unreachable", "expected_risk": "low", "expected_tools_any_of": ["send_reply_and_close", "lookup_booking"]},
+  {"id": "T15", "quick_reply_intent": "other", "text": "Never mind, sorted it myself.", "expected_intent": "other", "expected_risk": "medium", "expected_tools_any_of": ["send_reply_and_close"]}
+]

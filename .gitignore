@@ -1,0 +1,28 @@
+# Local environments and secrets
+.env
+.env.local
+.env.*.local
+**/.env
+**/venv/
+**/__pycache__/
+*.pyc
+
+# Node / Next.js
+**/node_modules/
+**/.next/
+**/.turbo/
+**/pnpm-debug.log*
+
+# Databases and logs
+**/data/*.db
+**/data/logs/*.jsonl
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Pytest / mypy caches
+**/.pytest_cache/
+**/.mypy_cache/
